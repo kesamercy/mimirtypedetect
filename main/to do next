@@ -1,0 +1,81 @@
+Current questions:
+
+
+
+
+
+map is a loop. so think of hwo to change the methods that can make this faster...
+
+
+
+things to try to change the impelemntaion:
+
+- look at small parts of the data then predict 
+
+
+break it down to check multiple batches at a time 
+
+pick out random samples in the data to check 
+
+
+check to see if the data is correct:
+
+for the first method guess the type then for the next batch test to see if the rest of the data matches the guessed type. 
+
+
+divide the batches evenly so that they cover the whole csv.
+
+use a small chunk of the csv to guess then use the rest to test. 
+
+
+observe the improvements on the run time for the data sets. 
+
+
+try changing the order and format of the loops so that the larger one is out and the smaller meaning the one that does the less work is on the indsi
+
+maybe not:
+
+for the loops, the smaller one is on the insde and the larger one is on the outside. 
+
+
+
+
+1. discoverd that the optimization method initially didn't work - resulted into same amount of time taken to do the work
+
+2. decided to write a function that:
+
+a. takes in a parameter that determines the frequency which rows are checked / sampled 
+
+
+
+Update method: 
+do randimization:
+
+1. you could test the data then predict the the type without checking all the other types once the first one is predicted 
+
+2. that is, test if the first 20 in the colunm are integers, then test the rest of the data to confirm if they are integers instead of trying to determine if they are strings, or time or date etc
+
+
+3. sample the data based on the functions.
+write a function that samples the prime factor of the data specified and add randomization, that is the function checks every 20 cols if the paremenrter passed is 20 and it determines the type based on the lines it read
+
+add radniomzation that is, every 20 + or - 10 to check the data around it. 
+
+
+4. document the findings of the various method implemenations that have worked and what time they take to run. 
+
+5. start by documenting the run times of the implementation for the first test. 
+
+6. find a program to read the csv into column form in scala 
+
+
+have a for loop:
+
+for(row in data)
+    for (col in 123)
+            sum [col] += row[col]
+
+Anakyze it using this function and then get the result for each row 
+
+
+read the data from a a link and not the local machine then figure how to push it to github. 

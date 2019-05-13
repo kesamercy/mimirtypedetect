@@ -1,0 +1,34 @@
+Data Type Detector: Program to detect data types found in large data sets.
+
+Description:
+
+Data type detect is used to analyse large data sets to determine the dominant data type found in the file it analyses. 
+
+Application Example:
+
+ A csv file with over 100,000 rows of data could have different forms of information and data types in it's rows and columns. It would take long for a human to accurately analyze the data before it becomes obvious it's less efficient and less reliable to manually go through dense data sets. Data type detect scans through large data sets and determines with as much accuracy as machine possible, what the dominant data types are in the analyzed data. 
+
+
+ Program Implementation Test Cases:
+
+ The following are a brief descriptions of the different impelmetnation approaches that were considered to improve on the running time of the program. As expected, the larger the data sets, the more work the program will do to analyse it all. That work has come at a cost of time. The originial implementation:
+
+ Base Case: 40,000 rows of data
+
+ > versionone.txt 
+ Based on version One Impelementation, the amount of time taken to read the base case data was an average of 152 seconds.
+
+ API: 
+
+ The program reads every coloumn of data in the csv file and counts the occurence of each data type in the file. the type with the highest count in each column is what's retruned as the predicition for the data type in the column. 
+ It is expected that each column would have different data types so each column is examined one at a time when the program is run. 
+
+ Runtime Analysis:
+
+ While this implementation does get us the required results, which is the data type determined from each column, the time taken to achieve the results is long. With larger data sets upward of 90,000 rows, the average time to run the program is  2.5hrs to acheive the same results. This is inefficient. We can do better.   
+
+
+
+
+
+
